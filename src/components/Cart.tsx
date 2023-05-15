@@ -13,8 +13,8 @@ export default function Cart({ setReceipt }: CartProps) {
 
   const totalPrice = selectedFoods.reduce((acc, food) => (acc + food.price), 0);
 
-  const handleClickOrder = () => {
-    const receipt = useOrder();
+  const handleClickOrder = async () => {
+    const receipt = await useOrder(selectedFoods, totalPrice);
     setReceipt(receipt);
     setFoods([]);
   };

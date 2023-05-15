@@ -22,6 +22,7 @@ export default function MenuItems({ menu, buttonType }: MenuItemProps) {
     <ul>
       {menu.map((food: Food, index: number) => (
         <Menu
+          // eslint-disable-next-line react/no-array-index-key
           key={`${food.name}-${index}`}
           name={food.name}
           price={food.price}

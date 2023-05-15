@@ -1,8 +1,10 @@
 import { useInterval, useLocalStorage } from 'usehooks-ts';
+
 import Cart from './components/Cart';
 import FilterableTable from './components/FilterableTable';
-import Receipt from './types/Receipt';
 import ReceiptPrinter from './components/ReceiptPrinter';
+
+import Receipt from './types/Receipt';
 
 export default function App() {
   const emptyReceipt = {} as Receipt;

@@ -3,7 +3,6 @@ import server from './mocks/server';
 // 모든 테스트 실행 전에 MSW 서버 실행
 // onUnhandledRequest : 핸들러 없다면 에러내서 실수 방지
 beforeAll(() => {
-  console.log('실행됨');
   server.listen({ onUnhandledRequest: 'error' });
 });
 
